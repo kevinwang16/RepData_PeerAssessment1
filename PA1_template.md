@@ -5,12 +5,6 @@ date: "Saturday, July 18, 2015"
 output: html_document
 ---
 
----
-title: 'Reproducible Research: Peer Assessment 1'
-author: "kevin wang"
-date: "Saturday, July 18, 2015"
-output: html_document
----
 
 
 Basic settings
@@ -36,7 +30,7 @@ aggregatedperdaymean <- aggregate(steps~interval,P1,mean)
 ###2.If you do not understand the difference between a histogram and a barplot, research the difference between them. Make a histogram of the total number of steps taken each day
 
 ```r
-barplot(aggregatedperday$steps, names.arg =aggregatedperday $date, xlab = "date", ylab = "steps")
+hist(aggregatedperday$steps,xlab = "date", ylab = "steps")
 ```
 
 ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
