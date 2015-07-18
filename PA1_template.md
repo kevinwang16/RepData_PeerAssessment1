@@ -39,7 +39,9 @@ hist(aggregatedperday$steps,xlab = "date", ylab = "steps")
 ###3.Calculate and report the mean and median of the total number of steps taken per day
 
 ```r
-mean(aggregatedperday$steps, na.rm=TRUE)
+mean1<-mean(aggregatedperday$steps, na.rm=TRUE)
+median1<-median(aggregatedperday$steps, na.rm=TRUE)
+mean1
 ```
 
 ```
@@ -47,7 +49,7 @@ mean(aggregatedperday$steps, na.rm=TRUE)
 ```
 
 ```r
-median(aggregatedperday$steps, na.rm=TRUE)
+median1
 ```
 
 ```
@@ -111,7 +113,9 @@ barplot(aggregatedmerge2$step,names.arg=aggregatedmerge2$date,xlab = "date", yla
 ![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png) 
 
 ```r
-mean(aggregatedmerge2$steps.x,na.rm=TRUE)
+mean2<-mean(aggregatedmerge2$steps.x,na.rm=TRUE)
+median2<-median(aggregatedmerge2$steps.x,na.rm=TRUE)
+mean2
 ```
 
 ```
@@ -119,12 +123,31 @@ mean(aggregatedmerge2$steps.x,na.rm=TRUE)
 ```
 
 ```r
-median(aggregatedmerge2$steps.x,na.rm=TRUE)
+median2
 ```
 
 ```
 ## [1] 10766.19
 ```
+
+```r
+mean2-mean1
+```
+
+```
+## [1] 0
+```
+
+```r
+median2-median1
+```
+
+```
+## [1] 1.188679
+```
+###So, after imputing the missing data, the new mean of total steps taken per day is the same as that of the old mean; the new median of total steps taken per day is greater than that of the old median.
+
+
 ##Are there differences in activity patterns between weekdays and weekends?
 ###1.Create a new factor variable in the dataset with two levels - "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.
 
